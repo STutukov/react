@@ -1,0 +1,98 @@
+.header{
+    box-shadow: 0px 1px 10px rgba(0,0,0,.3);
+    @include clearfix;
+	height:$height-header;
+
+	&__logo{
+		float: left;
+		a{
+			position:relative;
+			display:block;
+			padding:11px 25px;
+			width: $sidebar-w;
+			border-right:1px solid $grey;
+			text-align: center;
+			font-size: 38px;
+			text-decoration: none;
+			color:$main;
+			font-family:$logo;
+			&:after{
+				content:'';
+				position: absolute;
+				left:0;
+				right:0;
+				bottom:-1px;
+				border-bottom:1px solid $grey;
+			}
+		}
+	}	
+
+	&__search{
+		float:left;
+		margin-top:12px;
+		margin-left: 50px;
+		margin-right: 50px;
+		&-fields{
+			display:inline-block;
+			vertical-align:top;
+			width: 300px;
+			margin-right: 10px;
+		}
+		&-btn{
+			display:inline-block;
+			vertical-align:top;
+		}
+	}
+
+
+	&__profile{
+		float:right;
+		margin-right: 70px;
+		margin-top: 12px;
+	}
+
+	&__user{
+		display:inline-block;
+		vertical-align:top;
+		&-name{
+			display:inline-block;
+			vertical-align:middle;
+			margin-right: 10px;
+			color:$black;
+			font-family: $font;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		&-img{
+			display:inline-block;
+			vertical-align:middle;
+			width: 40px;
+			height: 40px;
+			border-radius:50%;
+			overflow:hidden;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+
+	&__notify{
+		display:inline-block;
+		vertical-align:top;
+		margin-left: 15px;
+		cursor: pointer;
+		&-icon{
+			display:inline-block;
+			vertical-align:top;
+			width: 40px;
+			height: 40px;
+			svg{
+				width: 100%;
+				height: 100%;
+				fill:$grey;
+			}
+		}
+	}
+}

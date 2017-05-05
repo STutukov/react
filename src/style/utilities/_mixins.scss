@@ -1,0 +1,27 @@
+@mixin button ($height: 35) {
+    display:inline-block;
+    height: #{$height}px;
+    line-height: #{$height - 2}px;
+    min-width: 60px;
+    padding: 0 20px;
+    background-color: $main;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after{
+        content:'';
+        display:table;
+    }
+    &:after{
+        clear:both;
+    }
+}

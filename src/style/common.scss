@@ -1,0 +1,71 @@
+@import "utilities/constants";
+@import "utilities/fonts";
+@import "utilities/media_queries";
+@import "utilities/mixins";
+
+@import "utilities/normalize.scss";
+
+
+@import "blocks/topBar.scss";
+@import "blocks/sideBar.scss";
+@import "blocks/scrollBar.scss";
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.fields{
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    vertical-align:top;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    height: 36px;
+    line-height: 36px;
+    min-width: 120px;
+    border:1px solid $grey;
+    padding:0 10px;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    background-color: transparent;
+    color:$black;
+    &:focus{
+    	border-color:darken($grey,10%)
+    }
+}
+
+.btn{
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    vertical-align:top;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    height: 36px;
+    line-height: 36px;
+    min-width: 120px;
+    border:none;
+    border-radius: 2px;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    background-color: $main;
+    text-align: center;
+    color:#fff;
+    &:hover{
+    	background-color:darken($main,10%)
+    }
+}
+.content{
+	margin-left: $sidebar-w;
+    height:calc(100vh - #{$height-header});
+}

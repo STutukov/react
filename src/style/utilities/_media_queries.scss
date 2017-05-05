@@ -1,0 +1,45 @@
+@mixin responsive {
+	.responsive & {
+		@content;
+	}
+}
+
+@mixin mq-lg {
+	@media only screen and (max-width: 1023px) {
+		.responsive & {
+			@content;
+		}
+	}
+}
+
+@mixin mq-md {
+	@media only screen and (max-width: 767px) {
+		.responsive & {
+			@content;
+		}
+	}
+}
+
+@mixin mq-sm {
+	@media only screen and (max-width: 479px) {
+		.responsive & {
+			@content;
+		}
+	}
+}
+
+@mixin mq-xs {
+	@media only screen and (max-width: 319px) {
+		.responsive & {
+			@content;
+		}
+	}
+}
+
+@mixin mq($rule) {
+	@media only screen and #{$rule} {
+		.responsive & {
+			@content;
+		}
+	}
+}

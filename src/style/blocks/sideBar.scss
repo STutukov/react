@@ -1,0 +1,48 @@
+.sidebar{
+	position: absolute;
+    width: $sidebar-w - 1px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+    height: calc(100vh - #{$height-header} - 1px);
+    z-index: 10;
+    background: #fff;
+    top: 66px;
+}
+
+
+.menu{
+	margin-top: 70px;
+	&__list{
+
+	}
+	&__item{
+		border-top:1px solid $grey;
+		&:last-child{
+			border-bottom:1px solid $grey;
+		}
+		a{
+			display:block;
+			position: relative;
+			padding:10px 15px 10px 55px;
+			color:$black;
+			text-decoration: none;
+			font-weight: bold;
+			&:before{
+				content:'';
+				display:block;
+				position: absolute;
+				left:0;
+				top:50%;
+				height:0;
+				width: 3px;
+				background:$main;
+				opacity:0;
+				transition:height .2s cubic-bezier(0.23, 1, 0.32, 1), top .2s cubic-bezier(0.23, 1, 0.32, 1);
+			}
+			&:hover:before{
+				opacity:1;
+				top:0;
+				height:100%;
+			}
+		}
+	}
+}
